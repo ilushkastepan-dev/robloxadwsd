@@ -1,1 +1,306 @@
+/* style.css — тёмно-сине-фиолетовый фон, неоновый текст, 90-е */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  background: radial-gradient(circle at 20% 30%, #1a0b2e, #0b0517);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Courier New', 'VT323', 'Fixedsys', monospace;
+  color: #b8b0ff;
+  text-shadow: 0 0 8px #5f3b9e, 0 0 20px #2f1b5e;
+}
+
+.container {
+  max-width: 1100px;
+  width: 100%;
+  background: rgba(10, 2, 26, 0.65);
+  backdrop-filter: blur(2px);
+  border: 4px double #6b4c9a;
+  box-shadow: 0 0 40px #3b1f6b, inset 0 0 30px #150b2b;
+  padding: 20px 25px;
+  border-radius: 30px 10px 30px 10px;
+}
+
+/* все блоки */
+.block {
+  background: rgba(18, 6, 38, 0.7);
+  border: 3px ridge #7a5aa8;
+  padding: 20px 18px;
+  margin-bottom: 28px;
+  border-radius: 20px 5px 20px 5px;
+  box-shadow: inset 0 0 15px #2b134b, 0 8px 0 #1d0b30;
+  transition: all 0.1s ease;
+}
+
+.block:last-child {
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  letter-spacing: 4px;
+  color: #cfb5ff;
+  text-shadow: 4px 4px 0 #38216b, 0 0 20px #a576f0;
+  border-bottom: 3px dotted #7a5aa8;
+  padding-bottom: 10px;
+  margin-bottom: 18px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+/* БЛОК 1: ШАПКА */
+.block-header {
+  text-align: center;
+  background: rgba(0, 0, 20, 0.5);
+  border-color: #9b7bd6;
+}
+
+.glitch-text {
+  font-size: 5.5rem;
+  font-weight: bold;
+  color: #deccff;
+  text-shadow: 6px 6px 0 #3d1b7a, 10px 10px 10px #220f44, 0 0 30px #b47aff;
+  letter-spacing: 12px;
+  transform: skew(-3deg);
+  font-family: 'Impact', 'Arial Black', sans-serif;
+}
+
+.subtitle {
+  font-size: 1.7rem;
+  color: #b79aff;
+  background: #1c0d33;
+  display: inline-block;
+  padding: 0 25px;
+  margin-top: 5px;
+  border-left: 6px solid #b47aff;
+  border-right: 6px solid #b47aff;
+  letter-spacing: 6px;
+}
+
+.blink {
+  animation: blink 1s step-end infinite;
+  color: #f0e68c;
+  margin-top: 12px;
+  font-size: 1.3rem;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* БЛОК 2: ABOUT */
+.block-about p {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  background: #140a24;
+  padding: 12px;
+  border-left: 12px solid #6f4da8;
+}
+
+.highlight {
+  color: #f5e97b;
+  background: #2d154b;
+  padding: 0 8px;
+  font-weight: bold;
+}
+
+.marquee {
+  background: #1f0f38;
+  padding: 10px;
+  margin-top: 18px;
+  border: 2px dashed #a07bdb;
+  color: #b7e0ff;
+  font-size: 1.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: marquee 12s linear infinite;
+}
+
+@keyframes marquee {
+  0% { text-indent: 100%; }
+  100% { text-indent: -100%; }
+}
+
+/* БЛОК 3: АВАТАР */
+.avatar-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  background: #150a2b;
+  padding: 15px;
+  border-radius: 40px 10px 40px 10px;
+  border: 2px solid #7a57b0;
+}
+
+.avatar-preview {
+  font-size: 5rem;
+  background: #1d0d32;
+  padding: 20px 30px;
+  border-radius: 30px 0 30px 0;
+  border: 6px double #9b7bd6;
+  min-width: 120px;
+  text-align: center;
+  box-shadow: 0 0 30px #5b3490;
+}
+
+.avatar-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn-90s {
+  background: #2f1b55;
+  border: 4px outset #7a58b3;
+  color: #ebdbff;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding: 12px 22px;
+  cursor: pointer;
+  text-shadow: 0 0 8px #b37aff;
+  box-shadow: 2px 2px 0 #140b22;
+  transition: 0.08s linear;
+  letter-spacing: 2px;
+}
+
+.btn-90s:hover {
+  background: #41297a;
+  border-style: inset;
+  transform: scale(0.96);
+  color: #ffffff;
+}
+
+.btn-90s:active {
+  background: #180d2e;
+  transform: scale(0.92);
+}
+
+.hint {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-top: 12px;
+  color: #8e7bb5;
+}
+
+/* БЛОК 4: МИРЫ */
+.world-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 14px;
+}
+
+.world-item {
+  background: #1b0d30;
+  border: 4px groove #6d4b9e;
+  padding: 16px 8px;
+  text-align: center;
+  font-size: 1.8rem;
+  border-radius: 30px 0 30px 0;
+  transition: 0.1s;
+  color: #cbb5ff;
+}
+
+.world-item span {
+  display: block;
+  font-size: 0.9rem;
+  background: #0c0520;
+  padding: 5px;
+  margin-top: 6px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+}
+
+.world-item:hover {
+  background: #2d1652;
+  border-color: #b38eff;
+  transform: scale(1.02);
+}
+
+/* БЛОК 5: СЧЁТЧИК */
+.counter-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  background: #130825;
+  padding: 20px;
+  border-radius: 60px 10px 60px 10px;
+  border: 4px solid #6d4b9e;
+}
+
+#playerCount {
+  font-size: 4rem;
+  font-family: 'VT323', 'Courier New', monospace;
+  background: #0d0420;
+  padding: 10px 30px;
+  border: 6px double #a47bdd;
+  color: #dee47b;
+  text-shadow: 0 0 30px #b8a13b;
+  letter-spacing: 6px;
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+}
+
+/* БЛОК 6: ПОДВАЛ */
+.block-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #13082a;
+  border-color: #6a479b;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+  background: #1d0e32;
+  padding: 10px;
+  border-radius: 50px;
+  border: 2px solid #63419b;
+}
+
+.footer-links span {
+  padding: 0 20px;
+  border-right: 3px dotted #8f71c7;
+  cursor: default;
+  color: #cfbfff;
+}
+
+.footer-links span:last-child {
+  border-right: none;
+}
+
+.footer-copy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-size: 1rem;
+  color: #7f6ba8;
+  background: #0f0620;
+  padding: 6px;
+  border-radius: 30px;
+  letter-spacing: 2px;
+}
+
+/* адаптация */
+@media (max-width: 600px) {
+  .glitch-text { font-size: 3.5rem; }
+  .block { padding: 15px; }
+  .avatar-preview { font-size: 3.5rem; min-width: 80px; }
+  .btn-90s { font-size: 1rem; padding: 8px 12px; }
+  #playerCount { font-size: 2.5rem; }
+}
