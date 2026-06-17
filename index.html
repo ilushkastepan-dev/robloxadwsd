@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roblox • 90s style</title>
+  <!-- CSS отдельно -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 6 БЛОКОВ -->
+  <div class="container">
 
+    <!-- БЛОК 1: Шапка -->
+    <header class="block block-header">
+      <div class="glitch-text">ROBLOX</div>
+      <div class="subtitle">✦ 90's nostalgic ✦</div>
+      <div class="blink">▶ НАЧАЛО 1999 ◀</div>
+    </header>
+
+    <!-- БЛОК 2: О Roblox -->
+    <section class="block block-about">
+      <h2>⚡ ВСЁ О РОБЛОКС ⚡</h2>
+      <p>Roblox — это платформа, где <span class="highlight">миллионы</span> игроков создают и делятся своими мирами. <br>
+      В 90-х мы бы играли в это на <span class="highlight">Power Mac</span> и <span class="highlight">Windows 98</span>!</p>
+      <div class="marquee">🏆 Более 100 млн активных игроков • 20 млн миров • Бесконечные приключения</div>
+    </section>
+
+    <!-- БЛОК 3: Аватар (интерактив) -->
+    <section class="block block-avatar">
+      <h2>👾 ТВОЙ АВАТАР</h2>
+      <div class="avatar-box">
+        <div class="avatar-preview" id="avatarDisplay">🧑‍🚀</div>
+        <div class="avatar-controls">
+          <button class="btn-90s" data-avatar="🧑‍🚀">Космонавт</button>
+          <button class="btn-90s" data-avatar="🤖">Робот</button>
+          <button class="btn-90s" data-avatar="👾">Монстр</button>
+          <button class="btn-90s" data-avatar="🧙">Маг</button>
+        </div>
+      </div>
+      <p class="hint">(нажми на кнопку — сменится аватар)</p>
+    </section>
+
+    <!-- БЛОК 4: Игровые миры (сетка) -->
+    <section class="block block-worlds">
+      <h2>🌍 ПОПУЛЯРНЫЕ МИРЫ</h2>
+      <div class="world-grid">
+        <div class="world-item">🏰 <span>Adopt Me!</span></div>
+        <div class="world-item">🔫 <span>Arsenal</span></div>
+        <div class="world-item">⚔️ <span>Blox Fruits</span></div>
+        <div class="world-item">🏎️ <span>Vehicle Simulator</span></div>
+        <div class="world-item">🧱 <span>Theme Park Tycoon</span></div>
+        <div class="world-item">👻 <span>Ghost Simulator</span></div>
+      </div>
+    </section>
+
+    <!-- БЛОК 5: Счётчик игроков (интерактив) -->
+    <section class="block block-counter">
+      <h2>📊 ОНЛАЙН ИГРОКОВ</h2>
+      <div class="counter-box">
+        <span id="playerCount">1,234,567</span>
+        <button class="btn-90s" id="updateCounter">🔄 ОБНОВИТЬ</button>
+      </div>
+      <p class="hint">* данные загружены в стиле 56k модема</p>
+    </section>
+
+    <!-- БЛОК 6: Подвал + ссылки -->
+    <footer class="block block-footer">
+      <div class="footer-links">
+        <span>📟 WEBRING</span>
+        <span>💾 DOWNLOAD</span>
+        <span>📧 MAIL</span>
+        <span>📠 FAX</span>
+      </div>
+      <div class="footer-copy">
+        <span>© 1999 ROBLOX • BEST VIEWED IN NETSCAPE 4.0</span>
+        <span class="blink">✦</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- JavaScript отдельно -->
+  <script src="script.js"></script>
+</body>
+</html>
